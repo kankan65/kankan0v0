@@ -1,24 +1,29 @@
-function spinRoulette() {
-  const resultElement = document.getElementById('result');
-  const randomNumber = Math.random();
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>うんｔい</title>
+</head>
+<body>
+  <div id="result"></div>
 
-  if (randomNumber < 1/3) {
-    resultElement.textContent = '当たり！';
-  } else {
-    resultElement.textContent = 'ハズレ！残念！^-^';
-    // アスキーアートをテキストエリアに表示
-    const asciiArt = `
-    _n
-   ( ｜　 ハ_ハ
-   ＼＼ (  ‘-^  )
-     ＼￣￣　 )
-       ７　　/
-クッソワロタです！
-   ハ_ハ
-（ ‘-^   )　　n
-￣　　 ＼　( E)
-７　　/＼ヽ/ /
-    `;
-    resultElement.textContent += asciiArt;
-  }
-}
+  <script>
+    function showAsciiArt() {
+      const asciiArt = `
+      _n
+     ( ｜　 ハ_ハ
+     ＼＼ (  ‘-^  )
+       ＼￣￣　 )
+         ７　　/
+    クッソワロタです！
+       ハ_ハ
+    （ ‘-^   )　　n
+    ￣　　 ＼　( E)
+    ７　　/＼ヽ/ /
+      `;
+      document.getElementById('result').textContent = asciiArt;
+    }
+    showAsciiArt();
+  </script>
+</body>
+</html>
